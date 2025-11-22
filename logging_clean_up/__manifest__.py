@@ -8,9 +8,9 @@
 
     'description': """
     Logging Cleanup Module
-    
+
     This module enhances Odoo's built-in ir.logging model with:
-    
+
     * Configurable log retention policies per log level
     * Time-based and count-based rotation modes
     * Automated scheduled cleanup via cron job
@@ -19,9 +19,9 @@
     * Audit logging after each cleanup operation
     """,
 
-    'author': "Al-Salam-Gas, Sayed Mohammed Aqeel Ebrahim",
+    'author': "Technology Pill Business Solution, Sayed Mohammed Aqeel Ebrahim",
     'maintainer': "Sayed Mohammed Aqeel Ebrahim",
-    'website': "https://sayedmohd.com/",
+    'website': "https://tecpill.com/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -38,14 +38,15 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
-        'data/ir_cron_data.xml',
-        'views/res_config_settings_views.xml',
-        'views/ir_logging_views.xml',
+            "security/ir.model.access.csv",
+            "data/ir_cron_data.xml",
+            "views/res_config_settings_views.xml",
+            "views/ir_logging_views.xml",
         ],
 
-    'application': False,
+    'application': True,
     'installable': True,
     'auto_install': False,
 }
+
 
