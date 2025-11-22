@@ -21,56 +21,71 @@
 </section>
 
 <section class="oe_container">
+    <div class="oe_row oe_spaced" style="width: 75%; margin: 20px auto; text-align: center;">
+        <img src="img/main_overview.png" alt="Logging Cleanup Module Overview" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+        <p style="color: rgba(112,112,112,1); font-size: 14px; margin-top: 10px; font-style: italic;">Main configuration interface</p>
+    </div>
+</section>
+
+<section class="oe_container">
     <div class="oe_row oe_spaced" style="width: 75%; margin: 0 auto 20px;">
         <h2 style="width: 100%; color: rgba(7,26,41,1); font-family: Montserrat; font-weight: Medium; font-size: 32px; margin-bottom: 15px;">Key Features</h2>
         
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Configurable Retention Policies</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ Set retention days per log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)</li>
-                <li style="margin-bottom: 10px;">✓ JSON-based configuration for flexible retention rules</li>
-                <li style="margin-bottom: 10px;">✓ Default retention: DEBUG (3 days), INFO (7 days), WARNING (30 days), ERROR (90 days), CRITICAL (180 days)</li>
-                <li style="margin-bottom: 10px;">✓ Easy configuration through Settings → Technical → Logging Cleanup</li>
+                <li style="margin-bottom: 10px;">- Set retention days per log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)</li>
+                <li style="margin-bottom: 10px;">- JSON-based configuration for flexible retention rules</li>
+                <li style="margin-bottom: 10px;">- Default retention: DEBUG (3 days), INFO (7 days), WARNING (30 days), ERROR (90 days), CRITICAL (180 days)</li>
+                <li style="margin-bottom: 10px;">- Easy configuration through Settings -&gt; Technical -&gt; Logging Cleanup</li>
             </ul>
+            <div style="margin-top: 20px; text-align: center;">
+                <img src="img/retention_rules_config.png" alt="Retention Rules Configuration" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+                <p style="color: rgba(112,112,112,1); font-size: 12px; margin-top: 8px; font-style: italic;">JSON retention rules configuration example</p>
+            </div>
         </div>
 
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Rotation Modes</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ <strong>Time-Based Rotation:</strong> Deletes logs older than retention period per level</li>
-                <li style="margin-bottom: 10px;">✓ <strong>Count-Based Rotation:</strong> Keeps only the last N records globally (default: 100,000)</li>
-                <li style="margin-bottom: 10px;">✓ Switch between modes easily in settings</li>
-                <li style="margin-bottom: 10px;">✓ Enable/disable cleanup functionality as needed</li>
+                <li style="margin-bottom: 10px;">- <strong>Time-Based Rotation:</strong> Deletes logs older than retention period per level</li>
+                <li style="margin-bottom: 10px;">- <strong>Count-Based Rotation:</strong> Keeps only the last N records globally (default: 100,000)</li>
+                <li style="margin-bottom: 10px;">- Switch between modes easily in settings</li>
+                <li style="margin-bottom: 10px;">- Enable/disable cleanup functionality as needed</li>
             </ul>
         </div>
 
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Automated Cleanup</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ Scheduled cron job runs daily to clean up old logs</li>
-                <li style="margin-bottom: 10px;">✓ Configurable via Settings → Technical → Automation → Scheduled Actions</li>
-                <li style="margin-bottom: 10px;">✓ Audit logging after each cleanup operation</li>
-                <li style="margin-bottom: 10px;">✓ No manual intervention required once configured</li>
+                <li style="margin-bottom: 10px;">- Scheduled cron job runs daily to clean up old logs</li>
+                <li style="margin-bottom: 10px;">- Configurable via Settings -&gt; Technical -&gt; Automation -&gt; Scheduled Actions</li>
+                <li style="margin-bottom: 10px;">- Audit logging after each cleanup operation</li>
+                <li style="margin-bottom: 10px;">- No manual intervention required once configured</li>
             </ul>
+            <div style="margin-top: 20px; text-align: center;">
+                <img src="img/cron_job_config.png" alt="Scheduled Action Configuration" style="max-width: 90%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+                <p style="color: rgba(112,112,112,1); font-size: 12px; margin-top: 8px; font-style: italic;">Automated cleanup scheduled action</p>
+            </div>
         </div>
 
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Performance Optimized</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ Optimized SQL-based cleanup for large tables</li>
-                <li style="margin-bottom: 10px;">✓ Minimal database load during cleanup operations</li>
-                <li style="margin-bottom: 10px;">✓ Efficient deletion using RETURNING clause for accurate counts</li>
-                <li style="margin-bottom: 10px;">✓ Safe transaction handling with proper commits</li>
+                <li style="margin-bottom: 10px;">- Optimized SQL-based cleanup for large tables</li>
+                <li style="margin-bottom: 10px;">- Minimal database load during cleanup operations</li>
+                <li style="margin-bottom: 10px;">- Efficient deletion using RETURNING clause for accurate counts</li>
+                <li style="margin-bottom: 10px;">- Safe transaction handling with proper commits</li>
             </ul>
         </div>
 
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Manual Cleanup</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ Manual cleanup button in Settings → Technical → Logging Cleanup</li>
-                <li style="margin-bottom: 10px;">✓ Manual cleanup action in Logs list view</li>
-                <li style="margin-bottom: 10px;">✓ Immediate feedback with notification showing deleted record count</li>
-                <li style="margin-bottom: 10px;">✓ Restricted to users with Technical Settings access</li>
+                <li style="margin-bottom: 10px;">- Manual cleanup button in Settings -&gt; Technical -&gt; Logging Cleanup</li>
+                <li style="margin-bottom: 10px;">- Manual cleanup action in Logs list view</li>
+                <li style="margin-bottom: 10px;">- Immediate feedback with notification showing deleted record count</li>
+                <li style="margin-bottom: 10px;">- Restricted to users with Technical Settings access</li>
             </ul>
         </div>
     </div>
@@ -113,10 +128,10 @@
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Requirements</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ Odoo 16.0+ required</li>
-                <li style="margin-bottom: 10px;">✓ Dependencies: base, base_setup (automatically included)</li>
-                <li style="margin-bottom: 10px;">✓ No additional modules required</li>
-                <li style="margin-bottom: 10px;">✓ Database superuser access for initial setup</li>
+                <li style="margin-bottom: 10px;">- Odoo 16.0+ required</li>
+                <li style="margin-bottom: 10px;">- Dependencies: base, base_setup (automatically included)</li>
+                <li style="margin-bottom: 10px;">- No additional modules required</li>
+                <li style="margin-bottom: 10px;">- Database superuser access for initial setup</li>
             </ul>
         </div>
 
@@ -128,7 +143,7 @@
                 <li>Place module in addons directory</li>
                 <li>Update app list in Odoo</li>
                 <li>Install "Logging Cleanup" module</li>
-                <li>Go to Settings → Technical → Logging Cleanup</li>
+                <li>Go to Settings -&gt; Technical -&gt; Logging Cleanup</li>
                 <li>Configure retention policies and enable cleanup</li>
             </ol>
         </div>
@@ -142,6 +157,11 @@
                 <li><strong>Max Records:</strong> Set maximum records to keep in count-based mode (default: 100,000)</li>
                 <li><strong>Manual Cleanup:</strong> Use "Clean Logs Now" button for immediate cleanup</li>
             </ul>
+        </div>
+        
+        <div style="margin: 30px 0; text-align: center;">
+            <img src="img/main_overview.png" alt="Logging Cleanup Settings Configuration" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+            <p style="color: rgba(112,112,112,1); font-size: 14px; margin-top: 10px; font-style: italic;">Settings -&gt; Technical -&gt; Logging Cleanup configuration page</p>
         </div>
     </div>
 </section>
@@ -168,11 +188,16 @@
 
             <h3 style="color: rgba(7,26,41,1); margin-top: 30px; font-size: 22px;">Manual Cleanup</h3>
             <ul style="margin-top: 10px; font-size: 18px;">
-                <li><strong>From Settings:</strong> Go to Settings → Technical → Logging Cleanup → Click "Clean Logs Now"</li>
-                <li><strong>From Logs View:</strong> Open Technical → Logging → Click "Clean Logs Now" button</li>
+                <li><strong>From Settings:</strong> Go to Settings -&gt; Technical -&gt; Logging Cleanup -&gt; Click "Clean Logs Now"</li>
+                <li><strong>From Logs View:</strong> Open Technical -&gt; Logging -&gt; Click "Clean Logs Now" button</li>
                 <li>Immediate cleanup using current configuration</li>
                 <li>Notification shows number of deleted records</li>
             </ul>
+        </div>
+        
+        <div style="margin: 30px 0; text-align: center;">
+            <img src="img/logs_list_view.png" alt="Logs List View with Cleanup Button" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+            <p style="color: rgba(112,112,112,1); font-size: 14px; margin-top: 10px; font-style: italic;">Logs list view showing the "Clean Logs Now" button</p>
         </div>
     </div>
 </section>
@@ -184,11 +209,11 @@
         <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 15px;">Architecture</h3>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ <strong>ir.logging Model Extension</strong>: Adds cleanup_logs() method with time-based and count-based strategies</li>
-                <li style="margin-bottom: 10px;">✓ <strong>res.config.settings Extension</strong>: Configuration UI for retention policies and rotation modes</li>
-                <li style="margin-bottom: 10px;">✓ <strong>Scheduled Action</strong>: Daily cron job (ir.cron) for automated cleanup</li>
-                <li style="margin-bottom: 10px;">✓ <strong>Optimized SQL</strong>: Uses RETURNING clause for efficient deletion and accurate counts</li>
-                <li style="margin-bottom: 10px;">✓ <strong>Audit Logging</strong>: Creates log entries after each cleanup operation</li>
+                <li style="margin-bottom: 10px;">- <strong>ir.logging Model Extension</strong>: Adds cleanup_logs() method with time-based and count-based strategies</li>
+                <li style="margin-bottom: 10px;">- <strong>res.config.settings Extension</strong>: Configuration UI for retention policies and rotation modes</li>
+                <li style="margin-bottom: 10px;">- <strong>Scheduled Action</strong>: Daily cron job (ir.cron) for automated cleanup</li>
+                <li style="margin-bottom: 10px;">- <strong>Optimized SQL</strong>: Uses RETURNING clause for efficient deletion and accurate counts</li>
+                <li style="margin-bottom: 10px;">- <strong>Audit Logging</strong>: Creates log entries after each cleanup operation</li>
             </ul>
         </div>
         
@@ -226,10 +251,10 @@
                 If you encounter any bugs or issues with this module, please report them on our GitHub repository. This helps us improve the module for everyone.
             </p>
             <ul style="list-style-type: none; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">✓ <strong>Report Bugs:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=bug_report.md" target="_blank" style="color: #007bff; text-decoration: underline;">Create a bug report</a></li>
-                <li style="margin-bottom: 10px;">✓ <strong>Request Features:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=feature_request.md" target="_blank" style="color: #007bff; text-decoration: underline;">Suggest a new feature</a></li>
-                <li style="margin-bottom: 10px;">✓ <strong>Ask Questions:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=question.md" target="_blank" style="color: #007bff; text-decoration: underline;">Get help with questions</a></li>
-                <li style="margin-bottom: 10px;">✓ <strong>View All Issues:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues" target="_blank" style="color: #007bff; text-decoration: underline;">Browse existing issues</a></li>
+                <li style="margin-bottom: 10px;">- <strong>Report Bugs:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=bug_report.md" target="_blank" style="color: #007bff; text-decoration: underline;">Create a bug report</a></li>
+                <li style="margin-bottom: 10px;">- <strong>Request Features:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=feature_request.md" target="_blank" style="color: #007bff; text-decoration: underline;">Suggest a new feature</a></li>
+                <li style="margin-bottom: 10px;">- <strong>Ask Questions:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues/new?template=question.md" target="_blank" style="color: #007bff; text-decoration: underline;">Get help with questions</a></li>
+                <li style="margin-bottom: 10px;">- <strong>View All Issues:</strong> <a href="https://github.com/Tecpill/technical_os_odoo_apps/issues" target="_blank" style="color: #007bff; text-decoration: underline;">Browse existing issues</a></li>
             </ul>
         </div>
 
