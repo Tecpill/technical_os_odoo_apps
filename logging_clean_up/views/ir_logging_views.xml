@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="base.ir_logging_tree_view"/>
         <field name="arch" type="xml">
             <!-- Add Clean Now button in the list header -->
-            <xpath expr="//tree" position="inside">
+            <xpath expr="//list" position="inside">
                 <header>
                     <button name="action_clean_logs_now" 
                             string="Run Cleanup (Per Settings)" 
@@ -25,9 +25,10 @@
         <field name="model">ir.logging</field>
         <field name="inherit_id" ref="base.ir_logging_search_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//filter" position="after">
-                <separator/>
-                <filter string="By Level" name="group_by_level" context="{'group_by': 'level'}"/>
+            <xpath expr="//search" position="inside">
+                <filter string="Today" name="today" domain="[('create_date', '&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0)))]"/>
+                <filter string="Last 7 Days" name="last_7_days" domain="[('create_date', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter string="Last 30 Days" name="last_30_days" domain="[('create_date', '&gt;=', (context_today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d'))]"/>
             </xpath>
         </field>
     </record>

@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 o_setting_box" attrs="{'invisible': [('log_cleanup_enabled', '!=', True)]}">
+                    <div class="col-6 o_setting_box" invisible="log_cleanup_enabled != True">
                         <div class="o_setting_left_pane">
                         </div>
                         <div class="o_setting_right_pane">
@@ -35,8 +35,8 @@
                     </div>
                 </div>
                 
-                <div class="row mt16 o_settings_container" attrs="{'invisible': [('log_cleanup_enabled', '!=', True)]}">
-                    <div class="col-6 o_setting_box" attrs="{'invisible': [('rotation_mode', '!=', 'time')]}">
+                <div class="row mt16 o_settings_container" invisible="log_cleanup_enabled != True">
+                    <div class="col-6 o_setting_box" invisible="rotation_mode != 'time'">
                         <div class="o_setting_left_pane">
                             <field name="log_retention_days"/>
                         </div>
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 o_setting_box" attrs="{'invisible': [('rotation_mode', '!=', 'time')]}">
+                    <div class="col-6 o_setting_box" invisible="rotation_mode != 'time'">
                         <div class="o_setting_left_pane">
                         </div>
                         <div class="o_setting_right_pane">
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 o_setting_box" attrs="{'invisible': [('rotation_mode', '!=', 'count')]}">
+                    <div class="col-6 o_setting_box" invisible="rotation_mode != 'count'">
                         <div class="o_setting_left_pane">
                         </div>
                         <div class="o_setting_right_pane">
